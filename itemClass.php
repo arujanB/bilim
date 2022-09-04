@@ -10,6 +10,28 @@ while($item = mysqli_fetch_assoc($result))
 
 ?>
 
+<?php
+
+	// $sku = $_POST['sku'];
+	// $name = $_POST['name'];
+	// $price = $_POST['price'];
+	// $switch = $_POST['switch'];
+	// $switch = $_POST['size'];
+	// $height = $_POST['height'];
+	// $width = $_POST['width'];
+	// $length = $_POST['length'];
+	// $weight = $_POST['weight'];
+
+
+	// $stmp = $connect->prepare("INSERT INTO product (sku, name, price, switch, size, height, width, length, weight) VALUES ('$sku', '$name', '$price', '$switch', '$size', '$height', '$width', '$length', '$weight');");
+	// $stmp = bind_param("ssisiiiii", $sku, $name, $price, $switch, $size, $height, $width, $length, $weight);
+	// $stmp->execute();
+	// echo "Successful";
+	// $stmp->close();
+	// $connect->close();
+
+?>
+
 <?php 
 
 class ItemClass {
@@ -288,6 +310,9 @@ foreach($posts as $item){
 
 	?>
 	<br>
+
+	<!-- <form action="connect.php" method="POST" name="myForm"> -->
+	
 	<div style="list-style: none;">
 		<li>
 			SKU: <input type="text" name="sku" value="">
@@ -329,7 +354,7 @@ foreach($posts as $item){
 						echo "<br> Write yor product weight:";
 						?>
 							<li style="list-style: none;">
-								Weight: <input type="text" name="size" value="">
+								Weight: <input type="text" name="weight" value="">
 							</li>
 						<?php
 						break;
@@ -337,9 +362,9 @@ foreach($posts as $item){
 						echo "<br> Write yor product height, width, length: ";
 						?>
 							<li style="list-style: none;">
-								height: <input type="text" name="dimention" value="">
-								weight: <input type="text" name="dimention" value="">
-								length: <input type="text" name="dimention" value="">
+								height: <input type="text" name="height" value="">
+								weight: <input type="text" name="weight" value="">
+								length: <input type="text" name="length" value="">
 							</li>
 						<?php
 						break;
@@ -347,7 +372,7 @@ foreach($posts as $item){
 			}
     ?>
 
-    <form action="" method="POST" name="myForm3">
+    <form action="insert.php" method="POST" name="myForm3">
         <input type="submit" name="add" value="ADD">
 	</form>
 
